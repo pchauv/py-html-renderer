@@ -1,0 +1,21 @@
+# Environnement virtuel (UV crée un dossier .venv local)
+.venv/
+.python-version
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Distribution / Build
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+
+# Fichiers de log et temporaires
+*.log
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

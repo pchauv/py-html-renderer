@@ -1,0 +1,56 @@
+[project]
+name = "py-html-renderer"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    { name = "pchauv" }
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/pchauv"
+Repository = "https://github.com/pchauv/py-project-template"
+Issues = "https://github.com/pchauv/py-project-template/issues"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.3.0",
+    "mypy>=1.9.0",
+    "pytest>=8.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+managed = true
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E", "F", "W", # Erreurs, Pyflakes, Warnings
+    "I",           # Isort (tri des imports)
+    "N",           # Pep8-naming
+    "UP",          # Pyupgrade (syntaxe moderne)
+    "B",           # Bugbear (erreurs communes)
+]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
