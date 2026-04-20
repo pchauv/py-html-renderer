@@ -28,9 +28,9 @@ jobs:
 
       - name: Check code quality
         run: |
-          uv run ruff check src
-          uv run ruff format --check src
+          uv run ruff check .
+          uv run ruff format --check .
           uv run mypy src
 
       - name: Run tests
-        run: uv run pytest test/
+        run: uv run pytest tests/
